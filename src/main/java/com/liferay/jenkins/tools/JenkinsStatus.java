@@ -316,8 +316,7 @@ public class JenkinsStatus {
 		logger.debug("Loading Jenkins URLs from {}", serversListFile);
 
 		for (URL jenkinsURL : JenkinsURLs.getJenkinsURLs(serversListFile)) {
-			String jenkinsURLString = jsonGetter.convertURL(
-				jenkinsURL.toString());
+			String jenkinsURLString = jenkinsURL.toString();
 
 			jenkinsURLs.add(jenkinsURLString);
 
